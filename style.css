@@ -1,0 +1,183 @@
+:root {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-size: 1.6rem;
+  color: azure;
+}
+header {
+  height: 60vh;
+  width: 100%;
+  background-image: url(https://images.unsplash.com/photo-1611615696778-62034b707dbf?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=982&q=80);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+ul {
+  display: flex;
+  justify-content: flex-end;
+  transition: background-color 0.5s ease;
+  margin-left: 10rem;
+}
+ul li:hover {
+  background-color: yellowgreen;
+}
+li {
+  margin-left: 1rem;
+  list-style-type: none;
+
+  padding: 2rem;
+}
+
+.logo {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+
+  flex-direction: column;
+  height: 80%;
+  animation: move 5s infinite;
+}
+
+@keyframes move {
+  from {
+    left: 0px;
+  }
+  to {
+    left: 20rem;
+  }
+}
+p {
+  margin-top: 2rem;
+}
+main {
+  width: 100%;
+  background-color: coral;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+.column {
+  flex: 30%;
+  max-width: 50%;
+  padding: 0 2px;
+  position: relative;
+}
+
+.column img {
+  margin-top: 2rem;
+  vertical-align: middle;
+  width: 100%;
+}
+h1 {
+  transition: margin-right 2s;
+}
+.Latest {
+  margin-top: 2rem;
+  display: block;
+
+  margin-right: 10rem;
+}
+.nav-2 {
+  display: flex;
+  justify-content: flex-end;
+}
+.content {
+  display: none;
+  position: absolute;
+  z-index: 1;
+}
+.dropdown-1:hover .content {
+  display: block;
+}
+.dropdown-2:hover .content {
+  display: block;
+}
+.Search li {
+  margin-left: 3rem;
+  background-color: red;
+  margin-top: 1rem;
+}
+footer {
+  display: flex;
+  height: 30vh;
+  background-color: skyblue;
+  justify-content: space-between;
+  flex-direction: row;
+  border: 0.2rem solid grey;
+  align-items: center;
+}
+h2 {
+  text-align: center;
+}
+.about {
+  flex-basis: 30%;
+  text-align: center;
+}
+.Address {
+  flex-basis: 30%;
+  text-align: center;
+}
+.phone {
+  flex-basis: 30%;
+  text-align: center;
+}
+.phone h2 {
+  text-align: center;
+}
+.copy {
+  height: 5vh;
+  background-color: grey;
+  margin-top: 0rem;
+}
+.car {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  overflow: hidden;
+}
+.car .desc {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: blue;
+  font-size: 4rem;
+  background-color: indianred;
+  color: black;
+
+  transition: all 400ms ease-out;
+}
+.car:hover .desc {
+  opacity: 1;
+}
+.car .desc:hover .text {
+  opacity: 1;
+  transform: translateY(250px);
+}
+.car .text {
+  height: 0;
+  opacity: 1;
+  transition-delay: 0s;
+  transition-duration: 0.4s;
+}
+.car:hover .text,
+.car:focus.text {
+  opacity: 1;
+  transform: translate(0px);
+}
